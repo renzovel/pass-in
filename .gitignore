@@ -4,3 +4,4 @@ node_modules
 *.http
 dev.db
 migrations/
+dist/
