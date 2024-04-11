@@ -8,6 +8,8 @@ export const registerForEvents = async (app:FastifyInstance)=>{
     .withTypeProvider<ZodTypeProvider>()
     .post("/events/:eventId/attendees", {
         schema:{
+            summary:'Register for events.',
+            tags:['RegisterForEvents'],
             body:schemaCreateForEvents,
             params:schemaParamForEvent,
             response:{

@@ -8,6 +8,8 @@ export const getEvent = async (app:FastifyInstance)=>{
     .withTypeProvider<ZodTypeProvider>()
     .get("/events/:eventId", {
         schema:{
+            summary:'Get events for ID.',
+            tags:['EventId'],
             params:schemaParam,
             response:{
                 200:schemaStatus200

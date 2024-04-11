@@ -9,6 +9,8 @@ export const createEvents = async (app:FastifyInstance)=>{
     .withTypeProvider<ZodTypeProvider>()
     .post("/events", {
         schema:{
+            summary:'Create events.',
+            tags:['Events'],
             body:schemaCreateEvents,
             response:{
                 201: schemaEvent201

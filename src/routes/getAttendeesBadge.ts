@@ -8,6 +8,8 @@ export const getAttendeesBadge = async (app:FastifyInstance)=>{
     app.withTypeProvider<ZodTypeProvider>()
     .get("/attendees/:attendeesId/badge", {
         schema:{
+            summary:'Get Attendees for Badge',
+            tags:['AttendeesBadge'],
             params:schemaParam,
             response:{
                 200:schemaStatus200
